@@ -21,7 +21,7 @@ sudo docker run \
   --volume=/var/run/docker.sock:/var/run/docker.sock \
   --detach=true \
   --name=collectd \
-	--env LOGSTASH_SERVER=192.168.59.103 \
-	--env LOGSTASH_PORT=25827
+	--env LOGSTASH_SERVER=[CUSTOM_IP] \
+	--env LOGSTASH_PORT=25826 \
   creativearea/collectd
 ```
