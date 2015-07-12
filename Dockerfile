@@ -21,7 +21,7 @@ RUN cd /tmp && \
 RUN git clone https://github.com/lebauce/docker-collectd-plugin.git ${COLLECTD_PATH}/share/docker-collectd-plugin && \
 	pip install -r ${COLLECTD_PATH}/share/docker-collectd-plugin/requirements.txt
 
-RUN	rm -rf /tmp/collectd-${COLLECTD_VERSION} && \
+RUN rm -rf /tmp/collectd-${COLLECTD_VERSION} && \
 	apt-get remove --purge -y build-essential git python-dev && \
 	apt-get clean && \
 	rm -rf /var/lib/apt/lists/*
