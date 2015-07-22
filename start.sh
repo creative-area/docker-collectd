@@ -1,9 +1,5 @@
 #!/bin/bash
-set -eo pipefail
-
-echo "Taking a nap, to allow network to properly set up.."
-sleep 20
-echo "That was a good nap. Now to work..."
+set -e
 
 sed -i "s/{{LOGSTASH_SERVER}}/$LOGSTASH_SERVER/g" "$COLLECTD_PATH/etc/collectd.conf"
 sed -i "s/{{LOGSTASH_PORT}}/$LOGSTASH_PORT/g" "$COLLECTD_PATH/etc/collectd.conf"
