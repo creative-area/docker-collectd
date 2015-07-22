@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -yq --no-install-recommends build-essentia
 RUN cd /tmp && \
   tar xzf collectd-${COLLECTD_VERSION}.tar.gz && \
   cd collectd-${COLLECTD_VERSION} && \
-  ./configure --prefix=${COLLECTD_PATH} --disable-daemon --disable-all-plugins --enable-network --enable-python && \
+  ./configure --prefix=${COLLECTD_PATH} --disable-all-plugins --enable-network --enable-python && \
   make && \
   make install
 

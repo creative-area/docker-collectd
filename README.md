@@ -5,6 +5,7 @@
 This uses the **Docker API** to report stats for each container on the host.
 
 The following container stats are reported:
+
 - Network bandwidth
 - Memory usage
 - CPU usage
